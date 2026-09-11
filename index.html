@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#101E19">
+  <meta name="description" content="RPM Estudio Automotriz — servicios de protección, detallado, restauración y pintura.">
+  <title>RPM Estudio Automotriz — Servicios</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#101E19; --bg2:#12211C; --cream:#F1EEE4; --red:#D94F30;
+      --muted:rgba(241,238,228,.62); --line:rgba(241,238,228,.12);
+      --card:rgba(18,33,28,.86); --max:1120px;
+    }
+    *{box-sizing:border-box}
+    html{background:var(--bg);scroll-behavior:smooth}
+    body{margin:0;background:
+      radial-gradient(circle at 100% 0%,rgba(217,79,48,.045),transparent 28%),
+      linear-gradient(180deg,var(--bg2),var(--bg));
+      color:var(--cream);font-family:"Space Grotesk",system-ui,sans-serif;
+      min-height:100vh;-webkit-font-smoothing:antialiased}
+    button{font:inherit;color:inherit}
+    .shell{width:min(calc(100% - 28px),var(--max));margin:auto}
+    header{position:relative;overflow:hidden;padding:28px 0 22px;border-bottom:1px solid var(--line)}
+    .watermark{position:absolute;right:-34px;top:8px;width:255px;height:150px;object-fit:contain;opacity:.055;filter:blur(.2px);pointer-events:none}
+    .topline{position:relative;display:flex;justify-content:space-between;align-items:flex-start;gap:20px}
+    .brand{max-width:650px}
+    .eyebrow{font:500 10px/1 "IBM Plex Mono",monospace;letter-spacing:.16em;color:var(--muted);text-transform:uppercase;margin-bottom:11px}
+    h1{font-size:clamp(29px,8vw,54px);line-height:.94;letter-spacing:-.055em;margin:0;font-weight:700}
+    h1 span{color:var(--red)}
+    .tagline{margin:13px 0 0;font-size:12px;line-height:1.45;color:var(--muted);max-width:390px}
+    .mark{width:60px;height:auto;max-height:42px;object-fit:contain;opacity:.95}
+    .city{margin-top:18px;font:500 9px/1.4 "IBM Plex Mono",monospace;letter-spacing:.12em;text-transform:uppercase;color:rgba(241,238,228,.48)}
+    .controls{padding:18px 0 8px}
+    .tabs{display:grid;grid-template-columns:1fr;gap:7px}
+    .tab{border:1px solid var(--line);background:rgba(241,238,228,.025);padding:13px 14px;text-align:left;border-radius:9px;cursor:pointer;transition:.2s ease;min-height:48px}
+    .tab .num{font:500 10px "IBM Plex Mono",monospace;color:var(--muted);display:block;margin-bottom:4px}
+    .tab strong{font-size:12px;letter-spacing:-.01em}
+    .tab.active{border-color:rgba(217,79,48,.65);background:rgba(217,79,48,.065)}
+    .tab.active .num{color:var(--red)}
+    .vehicle-row{display:flex;justify-content:flex-end;margin-top:9px}
+    .toggle{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);border-radius:999px;background:transparent;padding:6px 9px 6px 10px;cursor:pointer;color:rgba(241,238,228,.67);font:500 9px "IBM Plex Mono",monospace;letter-spacing:.02em}
+    .toggle i{width:25px;height:14px;border:1px solid rgba(241,238,228,.24);border-radius:99px;padding:2px;display:block}
+    .toggle i:after{content:"";display:block;width:8px;height:8px;border-radius:50%;background:rgba(241,238,228,.42);transition:.2s}
+    .toggle.on{border-color:rgba(217,79,48,.45);color:var(--cream)}
+    .toggle.on i:after{transform:translateX(11px);background:var(--red)}
+    main{padding:9px 0 46px}
+    .section-head{display:flex;justify-content:space-between;align-items:end;margin:10px 0 14px}
+    .section-title{font-size:19px;letter-spacing:-.035em;margin:0}
+    .count{font:500 9px "IBM Plex Mono",monospace;color:var(--muted)}
+    .grid{display:grid;grid-template-columns:1fr;gap:13px}
+    .card{background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden;box-shadow:0 12px 30px rgba(0,0,0,.12)}
+    .cover{position:relative;aspect-ratio:16/10;background:#0c1713;overflow:hidden}
+    .cover img{width:100%;height:100%;display:block;object-fit:cover}
+    .cover:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(16,30,25,.02),rgba(16,30,25,.28))}
+    .card-body{padding:15px}
+    .category{font:500 9px "IBM Plex Mono",monospace;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+    .service-title{font-size:19px;line-height:1.05;letter-spacing:-.035em;margin:7px 0 5px}
+    .subtitle{font-size:11px;line-height:1.5;color:var(--muted);margin:0 0 13px}
+    .price{font:600 22px/1 "IBM Plex Mono",monospace;letter-spacing:-.045em;margin:0 0 14px}
+    .price small{font-size:9px;letter-spacing:.02em;color:var(--muted);font-weight:500}
+    .quote{font-size:14px;letter-spacing:-.01em}
+    .includes{border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+    .include-btn{width:100%;display:flex;justify-content:space-between;align-items:center;padding:12px 0;background:none;border:0;cursor:pointer;font:500 10px "IBM Plex Mono",monospace;text-align:left}
+    .chev{font-size:16px;transition:.2s}
+    .includes.open .chev{transform:rotate(45deg)}
+    .include-list{display:none;margin:0;padding:0 0 13px 16px;color:rgba(241,238,228,.69);font-size:11px;line-height:1.5}
+    .includes.open .include-list{display:block}
+    .include-list li{padding:3px 0}
+    .note{font-size:10px;line-height:1.45;color:var(--muted);padding:11px 0 0}
+    .note b{color:var(--cream)}
+    .wa{display:flex;align-items:center;justify-content:center;width:100%;margin-top:14px;border:1px solid rgba(241,238,228,.2);background:var(--cream);color:var(--bg);border-radius:7px;padding:11px 12px;text-decoration:none;font-weight:700;font-size:11px;letter-spacing:.01em;transition:.2s}
+    .wa:hover{transform:translateY(-1px);border-color:var(--cream)}
+    .wa:before{content:"";width:6px;height:6px;background:var(--red);border-radius:50%;margin-right:7px}
+    footer{border-top:1px solid var(--line);padding:18px 0 28px;color:rgba(241,238,228,.43);font:500 8px/1.5 "IBM Plex Mono",monospace;letter-spacing:.08em;text-transform:uppercase}
+    @media(min-width:640px){
+      .tabs{grid-template-columns:repeat(3,1fr)}
+      .grid{grid-template-columns:repeat(2,1fr)}
+      .topline{align-items:center}
+      .mark{width:76px}
+    }
+    @media(min-width:900px){
+      .shell{width:min(calc(100% - 48px),var(--max))}
+      header{padding-top:38px}
+      .grid{grid-template-columns:repeat(3,1fr);gap:15px}
+      .card-body{padding:17px}
+      .service-title{font-size:20px}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="shell">
+      <img class="watermark" src="rpm_240z_crema.png" alt="" aria-hidden="true">
+      <div class="topline">
+        <div class="brand">
+          <div class="eyebrow">RPM · Estudio Automotriz</div>
+          <h1>Preservamos vehículos.<br><span>Perpetuamos historias.</span></h1>
+          <p class="tagline">Latonería · Restauración de clásicos JDM · Detallado premium</p>
+          <div class="city">Cuenca · Ecuador</div>
+        </div>
+        <img class="mark" src="rpm_mark_only_crema.png" alt="RPM">
+      </div>
+    </div>
+  </header>
+
+  <div class="shell controls">
+    <nav class="tabs" aria-label="Categorías de servicios">
+      <button class="tab active" data-group="g1"><span class="num">01 —</span><strong>Protección y brillo</strong></button>
+      <button class="tab" data-group="g2"><span class="num">02 —</span><strong>Detallados</strong></button>
+      <button class="tab" data-group="g3"><span class="num">03 —</span><strong>Restauración y pintura</strong></button>
+    </nav>
+    <div class="vehicle-row">
+      <button class="toggle" id="largeToggle" aria-pressed="false">
+        Vehículo grande (+15%) <i aria-hidden="true"></i>
+      </button>
+    </div>
+  </div>
+
+  <main class="shell">
+    <div class="section-head">
+      <h2 class="section-title" id="sectionTitle">Protección y brillo</h2>
+      <span class="count" id="sectionCount">04 servicios</span>
+    </div>
+    <section class="grid" id="serviceGrid" aria-live="polite"></section>
+  </main>
+
+  <footer>
+    <div class="shell">RPM Estudio Automotriz · Preservamos vehículos. Perpetuamos historias.</div>
+  </footer>
+
+<script>
+const groups = {
+  g1:{
+    title:"Protección y brillo",
+    services:[
+      {title:"Pulido Esencial (Abrillantado)", price:54.99, image:"images/pulido-esencial.jpg",
+       subtitle:"Pensado para un vehículo en buen estado que busca un refresh de brillo, sin corrección profunda.",
+       items:["Lavado y descontaminación de carrocería","Pulido de mantenimiento en una etapa","Cera líquida de protección (hasta 6 meses)","Pulido de faros incluido","Limpieza de vidrios","Tratamiento restaurador de plásticos y neumáticos"]},
+      {title:"Pulido Premium (Corrección de brillo)", price:127.99, image:"images/brillo.jpg",
+       subtitle:"Corrección profunda para recuperar la pintura y extraer el máximo brillo.",
+       items:["Prelavado de descontaminación","Lijado para eliminar la capa desgastada de la pintura","Pulido en tres etapas (elimina rayones, manchas y extrae el máximo brillo)","Aplicación de sellador híbrido","Cera de protección de 1 año","Aspirado interior y lavado exterior completo","Limpieza de vidrios + sellador cerámico","Restauración de neumáticos y plásticos exteriores"]},
+      {title:"Restauración y Pulido de Faros", price:27.99, image:"images/faros.jpg",
+       subtitle:"Recuperación de claridad y protección hidrofóbica.",
+       items:["Lijado","Pulido en tres etapas","Efecto hidrofóbico"]},
+      {title:"Recubrimiento Cerámico", price:227.99, image:"images/ceramico.jpg",
+       subtitle:"Preparación integral y aplicación de recubrimiento cerámico.",
+       items:["Prelavado de descontaminación","Restauración del estado de la pintura","Limpieza integral exterior e interior","Desengrasado de la superficie","Aplicación de recubrimiento cerámico","Sellador cerámico en plásticos, faros y vidrios"]}
+    ]},
+  g2:{
+    title:"Detallados",
+    services:[
+      {title:"Detallado Esencial", price:37.99, image:"images/limpieza.jpg",
+       subtitle:"Limpieza y protección esencial para interior y exterior.",
+       items:["Limpieza interior estándar (aspirado completo de cabina y baúl)","Limpieza y abrillantado de aros y neumáticos","Prelavado exterior de descontaminación","Lavado exterior con espuma activa","Limpieza de vidrios con repelente de agua y polvo","Tratamiento restaurador de plásticos exteriores + repelencia","Tratamiento restaurador y abrillantador de neumáticos","Aplicación de cera líquida de protección (hasta 3 meses)"]},
+      {title:"Detallado Premium (Plan Integral RPM)", price:187.99, image:"images/premium.jpg",
+       subtitle:"El plan integral RPM para interior, motor, exterior, faros y protección.",
+       items:["Limpieza interior integral (asientos, alfombra, tablero, volante y pedales, plásticos internos + protección UV)","Detallado y limpieza integral de motor (desengrasado, desmanchado de metales, plásticos y mangueras, restaurador resistente a altas temperaturas)","Detallado exterior integral (lavado con espuma activa, aros, pasaruedas, guardabarros, vidrios con repelente, tratamiento de plásticos y neumáticos)","Restauración y pulido de faros (lijado + pulido en 3 etapas + efecto hidrofóbico)","Pulido de nivelación en una etapa (paso de pulidora necesario para regular y nivelar la pintura antes del sellado)","Sellador cerámico en faros, plásticos y vidrios","Cera de protección de larga duración (1 año)"],
+       note:"Adicional (no incluido): desmontaje de asientos — consultar."},
+      {title:"Detallado de Motor", price:47.99, image:"images/motor.jpg",
+       subtitle:"Limpieza especializada del vano motor con protección de superficies.",
+       items:["Limpieza de bóveda de motor","Desmanchado de metales","Desengrasado de plásticos y mangueras","Restaurador resistente a altas temperaturas","Limpieza exterior de cortesía"],
+       note:"Trabajamos con rociadores y espumadores — no utilizamos agua a presión de manera directa sobre el motor."},
+      {title:"Limpieza de Interiores", price:107.99, image:"images/interiores.jpg",
+       subtitle:"Limpieza profunda de cabina y baúl con protección y cortesía exterior.",
+       items:["Aspirado completo de cabina y baúl","Detallado profundo de asientos y alfombra","Limpieza integral de volante, tablero y pedales","Tratamiento restaurador de plásticos internos + protección UV","Servicio exprés exterior de cortesía (lavado con espuma, vidrios con repelente, tratamiento de plásticos y neumáticos exteriores)","Ambientador RPM de regalo"],
+       note:"Adicional (no incluido): desmontaje de asientos — consultar."}
+    ]},
+  g3:{
+    title:"Restauración y pintura",
+    services:[
+      {title:"Latonería", price:null, image:"images/latoneria.jpg",
+       subtitle:"Evaluación y presupuesto previo según el trabajo a realizar.",
+       items:["Cotización previa según el trabajo a realizar","Se puede armar un presupuesto preliminar con fotos o video de la zona afectada"]},
+      {title:"Restauración de carrocería", price:null, image:"images/restauracion.jpg",
+       subtitle:"Restauración estructural parcial o completa, según tus necesidades y presupuesto.",
+       items:["Restauración estructural parcial o completa (distinta de un arreglo puntual por golpe)","Trabajamos según tus necesidades y presupuesto, buscando la mejor relación calidad-precio"]},
+      {title:"Pintura automotriz", price:null, image:"images/pintura.jpg",
+       subtitle:"Proyectos de cambio de color o pintura completa del vehículo.",
+       items:["Cambio de color o pintura completa del vehículo","Cotización previa según el alcance del proyecto"]}
+    ]
+  }
+};
+
+let activeGroup="g1", large=false;
+
+function money(value){
+  const v = large ? value*1.15 : value;
+  return "$"+v.toFixed(2);
+}
+function waUrl(title){
+  const text = `Hola RPM Estudio Automotriz. Quiero consultar sobre el servicio "${title}".`;
+  return "https://wa.me/593981042788?text="+encodeURIComponent(text);
+}
+function card(s){
+  const price = s.price === null ? `<div class="price quote">Cotiza tu servicio</div>` : `<div class="price" data-base-price="${s.price}">${money(s.price)} <small>USD</small></div>`;
+  const items = s.items.map(x=>`<li>${x}</li>`).join("");
+  return `<article class="card">
+    <div class="cover"><img src="${s.image}" alt="${s.title}" loading="lazy"></div>
+    <div class="card-body">
+      <div class="category">${groups[activeGroup].title}</div>
+      <h3 class="service-title">${s.title}</h3>
+      <p class="subtitle">${s.subtitle}</p>
+      ${price}
+      <div class="includes">
+        <button class="include-btn" type="button">Ver qué incluye <span class="chev">+</span></button>
+        <ul class="include-list">${items}</ul>
+      </div>
+      ${s.note ? `<div class="note"><b>Nota:</b> ${s.note}</div>` : ""}
+      <a class="wa" href="${waUrl(s.title)}" target="_blank" rel="noopener">Consultar por WhatsApp</a>
+    </div>
+  </article>`;
+}
+function render(){
+  const g=groups[activeGroup];
+  document.getElementById("sectionTitle").textContent=g.title;
+  document.getElementById("sectionCount").textContent=String(g.services.length).padStart(2,"0")+" servicios";
+  document.getElementById("serviceGrid").innerHTML=g.services.map(card).join("");
+  document.querySelectorAll(".include-btn").forEach(btn=>{
+    btn.addEventListener("click",()=>{
+      const box=btn.parentElement;
+      box.classList.toggle("open");
+    });
+  });
+}
+document.querySelectorAll(".tab").forEach(btn=>{
+  btn.addEventListener("click",()=>{
+    activeGroup=btn.dataset.group;
+    document.querySelectorAll(".tab").forEach(x=>x.classList.toggle("active",x===btn));
+    render();
+    window.scrollTo({top:document.querySelector("main").offsetTop-8,behavior:"smooth"});
+  });
+});
+document.getElementById("largeToggle").addEventListener("click",e=>{
+  large=!large;
+  e.currentTarget.classList.toggle("on",large);
+  e.currentTarget.setAttribute("aria-pressed",large);
+  document.querySelectorAll("[data-base-price]").forEach(el=>el.textContent=money(Number(el.dataset.basePrice))+" USD");
+});
+render();
+</script>
+</body>
+</html>
