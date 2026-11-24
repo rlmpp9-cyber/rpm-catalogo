@@ -137,43 +137,45 @@ const groups = {
   g1:{
     title:"Protección y brillo",
     services:[
-      {title:"Pulido Esencial (Abrillantado)", price:54.99, image:"images/pulido-esencial.jpg",
-       subtitle:"Pensado para un vehículo en buen estado que busca un refresh de brillo, sin corrección profunda.",
-       items:["Lavado y descontaminación de carrocería","Pulido de mantenimiento en una etapa","Cera líquida de protección (hasta 6 meses)","Pulido de faros incluido","Limpieza de vidrios","Tratamiento restaurador de plásticos y neumáticos"]},
-      {title:"Pulido Premium (Corrección de brillo)", price:127.99, image:"images/brillo.jpg",
-       subtitle:"Corrección profunda para recuperar la pintura y extraer el máximo brillo.",
-       items:["Prelavado de descontaminación","Lijado para eliminar la capa desgastada de la pintura","Pulido en tres etapas (elimina rayones, manchas y extrae el máximo brillo)","Aplicación de sellador híbrido","Cera de protección de 1 año","Aspirado interior y lavado exterior completo","Limpieza de vidrios + sellador cerámico","Restauración de neumáticos y plásticos exteriores"]},
-      {title:"Restauración y Pulido de Faros", price:27.99, image:"images/faros.jpg",
+      {title:"Protección y Brillo — Nivel 1", price:65, image:"images/pulido-esencial.jpg",
+       subtitle:"Refresh de brillo para un vehículo en buen estado, con limpieza y cera de 6 meses.",
+       items:["Pulido de nivelación y brillo en una etapa (2 en 1)","Limpieza interior estándar","Limpieza y abrillantado de aros y neumáticos","Prelavado exterior de descontaminación","Lavado exterior con espuma activa","Limpieza de vidrios","Tratamiento restaurador de plásticos exteriores + repelencia","Tratamiento restaurador y abrillantador de neumáticos","Cera de protección de hasta 6 meses"]},
+      {title:"Protección y Brillo — Nivel 2", price:125, image:"images/brillo.jpg",
+       subtitle:"Pulido en dos etapas para nivelar la pintura y extraer más brillo, con cera de 1 año.",
+       items:["Pulido en dos etapas: nivelación y brillo","Limpieza interior estándar","Limpieza y abrillantado de aros y neumáticos","Prelavado exterior de descontaminación","Lavado exterior con espuma activa","Limpieza de vidrios","Tratamiento restaurador de plásticos exteriores + repelencia","Tratamiento restaurador y abrillantador de neumáticos","Cera de protección de hasta 1 año"]},
+      {title:"Micro Pulido + Cerámico", price:250, image:"images/ceramico.jpg",
+       subtitle:"Pulido en 3 etapas y protección nano cerámica de hasta 3 años.",
+       items:["Pulido en 3 etapas","Protección nano cerámica de hasta 3 años","Detallado interior","Detallado exterior","Limpieza de vidrios + repelencia","Restauración y pulido de faros","Sellador cerámico en faros, plásticos y vidrios"]},
+      {title:"Restauración y Pulido de Faros", price:25, image:"images/faros.jpg",
        subtitle:"Recuperación de claridad y protección hidrofóbica.",
-       items:["Lijado","Pulido en tres etapas","Efecto hidrofóbico"]},
-      {title:"Recubrimiento Cerámico", price:227.99, image:"images/ceramico.jpg",
-       subtitle:"Preparación integral y aplicación de recubrimiento cerámico.",
-       items:["Prelavado de descontaminación","Restauración del estado de la pintura","Limpieza integral exterior e interior","Desengrasado de la superficie","Aplicación de recubrimiento cerámico","Sellador cerámico en plásticos, faros y vidrios"]}
+       items:["Lijado","Pulido en 3 etapas","Efecto hidrofóbico"]}
     ]},
   g2:{
     title:"Detallados",
     services:[
-      {title:"Detallado Esencial", price:37.99, image:"images/limpieza.jpg",
+      {title:"Detallado — Nivel 1 (Esencial)", price:35, image:"images/limpieza.jpg",
        subtitle:"Limpieza y protección esencial para interior y exterior.",
-       items:["Limpieza interior estándar (aspirado completo de cabina y baúl)","Limpieza y abrillantado de aros y neumáticos","Prelavado exterior de descontaminación","Lavado exterior con espuma activa","Limpieza de vidrios con repelente de agua y polvo","Tratamiento restaurador de plásticos exteriores + repelencia","Tratamiento restaurador y abrillantador de neumáticos","Aplicación de cera líquida de protección (hasta 3 meses)"]},
-      {title:"Detallado Premium (Plan Integral RPM)", price:187.99, image:"images/premium.jpg",
-       subtitle:"El plan integral RPM para interior, motor, exterior, faros y protección.",
-       items:["Limpieza interior integral (asientos, alfombra, tablero, volante y pedales, plásticos internos + protección UV)","Detallado y limpieza integral de motor (desengrasado, desmanchado de metales, plásticos y mangueras, restaurador resistente a altas temperaturas)","Detallado exterior integral (lavado con espuma activa, aros, pasaruedas, guardabarros, vidrios con repelente, tratamiento de plásticos y neumáticos)","Restauración y pulido de faros (lijado + pulido en 3 etapas + efecto hidrofóbico)","Pulido de nivelación en una etapa (paso de pulidora necesario para regular y nivelar la pintura antes del sellado)","Sellador cerámico en faros, plásticos y vidrios","Cera de protección de larga duración (1 año)"],
-       note:"Adicional (no incluido): desmontaje de asientos — consultar."},
-      {title:"Detallado de Motor", price:47.99, image:"images/motor.jpg",
+       items:["Limpieza interior estándar","Limpieza y abrillantado de aros y neumáticos","Prelavado exterior de descontaminación","Lavado exterior con espuma activa","Limpieza de vidrios","Tratamiento restaurador de plásticos exteriores + repelencia","Tratamiento restaurador y abrillantador de neumáticos","Protección de pintura con cera de hasta 3 meses"]},
+      {title:"Detallado — Nivel 2", price:85, image:"images/interiores.jpg",
+       subtitle:"Detallado interior y exterior con cera de protección de 6 meses.",
+       items:["Detallado interior: asientos, alfombra, tablero, volante y pedales, plásticos internos + protección UV","Detallado exterior: lavado con espuma activa, aros, guardabarros, tratamiento de plásticos y neumáticos","Limpieza de vidrios + repelencia","Cera de protección de hasta 6 meses"]},
+      {title:"Detallado — Nivel 3", price:125, image:"images/pulido-esencial.jpg",
+       subtitle:"Detallado integral con pulido de nivelación y brillo en una etapa (2 en 1).",
+       items:["Detallado interior integral","Detallado exterior integral: incluye pasaruedas y vidrios con repelente","Pulido de nivelación y brillo en una etapa (2 en 1)","Limpieza de vidrios y repelencia en parabrisas delantero y posterior","Cera de protección de hasta 6 meses"]},
+      {title:"Paquete Integral (Plan Integral RPM)", price:185, from:true, image:"images/premium.jpg",
+       subtitle:"El plan integral RPM: interior, motor, exterior, faros, pulido y protección de 1 año.",
+       items:["Detallado interior integral","Detallado de motor integral","Detallado exterior integral","Restauración y pulido de faros","Pulido de nivelación y brillo en una etapa (2 en 1)","Sellador cerámico en faros, plásticos y vidrios","Cera de larga duración de hasta 1 año"],
+       note:"Desmontaje de asientos no incluido — se cotiza aparte."},
+      {title:"Detallado de Motor", price:45, image:"images/motor.jpg",
        subtitle:"Limpieza especializada del vano motor con protección de superficies.",
        items:["Limpieza de bóveda de motor","Desmanchado de metales","Desengrasado de plásticos y mangueras","Restaurador resistente a altas temperaturas","Limpieza exterior de cortesía"],
-       note:"Trabajamos con rociadores y espumadores — no utilizamos agua a presión de manera directa sobre el motor."},
-      {title:"Limpieza de Interiores", price:107.99, image:"images/interiores.jpg",
-       subtitle:"Limpieza profunda de cabina y baúl con protección y cortesía exterior.",
-       items:["Aspirado completo de cabina y baúl","Detallado profundo de asientos y alfombra","Limpieza integral de volante, tablero y pedales","Tratamiento restaurador de plásticos internos + protección UV","Servicio exprés exterior de cortesía (lavado con espuma, vidrios con repelente, tratamiento de plásticos y neumáticos exteriores)","Ambientador RPM de regalo"],
-       note:"Adicional (no incluido): desmontaje de asientos — consultar."}
+       note:"Trabajamos con rociadores y espumadores — no utilizamos agua a presión de manera directa sobre el motor. Como adicional dentro de otro paquete: $35."}
     ]},
   g3:{
     title:"Restauración y pintura",
     services:[
       {title:"Latonería", price:null, image:"images/latoneria.jpg",
-       subtitle:"Evaluación y presupuesto previo según el trabajo a realizar.",
+       subtitle:"Reparación puntual de carrocería (golpes y daños), con presupuesto previo.",
        items:["Cotización previa según el trabajo a realizar","Se puede armar un presupuesto preliminar con fotos o video de la zona afectada"]},
       {title:"Restauración de carrocería", price:null, image:"images/restauracion.jpg",
        subtitle:"Restauración estructural parcial o completa, según tus necesidades y presupuesto.",
@@ -188,15 +190,18 @@ const groups = {
 let activeGroup="g1", large=false;
 
 function money(value){
-  const v = large ? value*1.15 : value;
+  const v = large ? Math.round(value*1.15) : value;
   return "$"+v.toFixed(2);
+}
+function priceHtml(s){
+  return `${s.from?'<small>desde</small> ':''}${money(s.price)} <small>USD</small>`;
 }
 function waUrl(title){
   const text = `Hola RPM Estudio Automotriz. Quiero consultar sobre el servicio "${title}".`;
   return "https://wa.me/593981042788?text="+encodeURIComponent(text);
 }
 function card(s){
-  const price = s.price === null ? `<div class="price quote">Cotiza tu servicio</div>` : `<div class="price" data-base-price="${s.price}">${money(s.price)} <small>USD</small></div>`;
+  const price = s.price === null ? `<div class="price quote">Cotiza tu servicio</div>` : `<div class="price" data-base-price="${s.price}" data-from="${s.from?1:0}">${priceHtml(s)}</div>`;
   const items = s.items.map(x=>`<li>${x}</li>`).join("");
   return `<article class="card">
     <div class="cover"><img src="${s.image}" alt="${s.title}" loading="lazy"></div>
@@ -238,7 +243,7 @@ document.getElementById("largeToggle").addEventListener("click",e=>{
   large=!large;
   e.currentTarget.classList.toggle("on",large);
   e.currentTarget.setAttribute("aria-pressed",large);
-  document.querySelectorAll("[data-base-price]").forEach(el=>el.textContent=money(Number(el.dataset.basePrice))+" USD");
+  document.querySelectorAll("[data-base-price]").forEach(el=>el.innerHTML=priceHtml({price:Number(el.dataset.basePrice),from:el.dataset.from==="1"}));
 });
 render();
 </script>
